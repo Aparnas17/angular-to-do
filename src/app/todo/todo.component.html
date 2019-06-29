@@ -1,0 +1,31 @@
+ <div class="container todo-app">
+    <div class="row mx-auto w-75 ml-3 mr-3 mb-3 mt-0 p-3">
+            <div class="w-25">Add your To-Do's</div>
+        <div class="col-xs-8 mr-3 w-50">
+            <input 	type="text" [(ngModel)]="newTodoText" class="form-control" placeholder="Enter new To-Do item">
+        </div>
+        <div class="col-xs-4 todo_add">
+            <button type="button" class="btn btn-info" (click)="addTodo(todoStatus)">Add</button>
+        </div>
+    </div>
+    <div class="row mx-auto w-75 m-3 p-2">
+            <div class="w-25">My To-Do List</div>
+        <div class="w-50">
+            <table class="table table-striped">
+                <tbody>
+                    <tr *ngFor="let todo of todoStore.todos; let idx = index">
+                        <td>
+                            <label 	class="custom-control custom-checkbox todo-app__list-label"
+                                    [class.todo-app__list-label-completed]="todo.completed">
+                                <span class="custom-control-label1" for="">{{todo.title}}</span>
+                            </label>
+                        </td>
+                        <td class="text-right">
+                            <button class="btn btn-danger btn-xs" (click)="remove(todo, todoStatus)"> Delete </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+ </div>
