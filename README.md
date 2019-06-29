@@ -1,6 +1,19 @@
 # Todo
+1. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+2. Clone or Download the project on your local machine
+
+3. Run :- npm i or npm install (to get the node_modules)
+
+3. Install Bootstrap using  :- npm install bootstrap --save
+
+4. And, open angular.json file and add bootstrap file path to the styles section. Like:
+
+        "styles": [
+        "src/styles.css",
+        "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
+5. Run :- ng serve --port (port on which you want to run the project. Default will be 4200)
 
 ## Development server
 
